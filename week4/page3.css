@@ -9,8 +9,25 @@ body {
   background-color: #697a98;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
   position: relative;
+}
+
+.describe {
+  color: white;
+  margin: 30px;
+  text-align: center;
+}
+
+.nut {
+  text-align: right;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.nut a img {
+  height: 50px;
+  width: auto;
 }
 
 .plans-container {
@@ -127,7 +144,6 @@ i {
   background-color: #395681;
 }
 
-/* Form Container */
 .form-container {
   background-color: white;
   border-radius: 10px;
