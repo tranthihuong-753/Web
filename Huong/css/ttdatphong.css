@@ -1,0 +1,64 @@
+:root{
+    --color1:#B8BFD6;
+    --color2:#697A98;
+    --color3:#19335A;
+    --color4:#8FC8EB;
+    --color5:#4675C0;
+    --color6:#FFFFFF;
+    --color7:#dea1f5;
+}
+@font-face {
+    font-family: font1;
+    src: url('../fonts/Playwrite_GB_S/PlaywriteGBS-Italic-VariableFont_wght.ttf');
+}
+*{
+    text-decoration: none;
+    font-family: monospace;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.a2{
+    display: grid;
+    background-color: #abc3f0;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+    padding: 10px;
+}
+.bonthongtindatphong{
+    font-size: 2vw;
+}
+.button{
+    background-color: var(--color1); /* Màu nền nút */
+    color: white; /* Màu chữ */
+    border: none;
+    padding: 10px;
+    cursor: pointer; /* Thay đổi con trỏ khi di chuột */
+    border-radius: 5px; /* Bo góc */
+    width: 20vw;
+}
+.menu-list {
+    display: none; /* Ẩn danh sách ban đầu */
+    max-height: 100px; /* Chiều cao tối đa của danh sách */
+    overflow-y: auto; /* Thêm thanh cuộn nếu vượt quá chiều cao */
+    border: 1px solid #007BFF; /* Viền cho danh sách */
+    margin-top: 10px; /* Khoảng cách giữa nút và danh sách */
+    padding: 10px; /* Lề bên trong */
+    border-radius: 5px; /* Bo góc */
+    background-color: #f9f9f9; /* Màu nền danh sách */
+    position: absolute;/*  chèn lên phần tử khác  */
+}
+/* Một chút CSS để hiển thị nút và lịch */
+#datepicker {
+    display: none; /* Ẩn lịch ban đầu */
+    position: absolute; /* Đặt lịch ở vị trí tuyệt đối */
+    z-index: 1000; /* Đảm bảo lịch ở trên cùng */
+}
+.menu-item{
+    border: 1px solid var(--color7);
+    cursor: pointer;
+}
+
+
