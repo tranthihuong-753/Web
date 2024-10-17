@@ -1,5 +1,5 @@
 :root {
-    --color-background: #e8eaf0; 
+    --color-background: #d6dcf0; 
     --color-header: #3f6aaf; 
     --color-footer: #697a98; 
     --color-text: #027494; 
@@ -107,7 +107,7 @@ button.pick {
     font-size: 1.1em; 
     cursor: pointer; 
     transition: background-color 0.3s ease, transform 0.3s ease; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    box-shadow: 0 4px 6px rgba(133, 123, 222, 0.1); /* Đổ bóng */
     margin-top: 20px;
 }
 
