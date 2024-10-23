@@ -21,50 +21,14 @@ body {
   font-family: "Times New Roman", Times, serif;
   background-color: var(--color-background);
   color: var(--color-text);
+  overflow-x: hidden; 
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 75px;
-  background-color: var(--color-header);
-  padding: 0 30px;
-  z-index: 1000;
-}
-
-.home {
-  flex: 4;
-  margin-left: 40px;
-}
-
-.menu {
-  flex: 6;
-  display: flex;
-  gap: 200px;
-  margin-left: 30px;
-}
-
-.home-img {
-  width: auto;
-  height: 70px;
-}
-
-.menu a {
-  color: var(--color-white);
-  text-decoration: none;
-  font-size: var(--font-size-medium);
-}
-
-/* Container 1 */
 .container {
   display: flex;
   gap: var(--spacing);
   padding: var(--spacing) 0;
-  margin-top: 50px;
+  margin-top: 75px; 
   margin-bottom: 60px;
 }
 
@@ -74,29 +38,25 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  text-align: center;
   margin-left: 60px;
 }
 
 @font-face {
   font-family: font1;
-  src: url("../week4/font-styleHome/Potta_One/PottaOne-Regular.ttf");
+  src: url('../week4/font-styleHome/Potta_One/PottaOne-Regular.ttf');
 }
 
 .left-content h2 {
   font-size: var(--font-size-h2);
   font-family: font1;
   margin-bottom: 15px;
-  margin-left: 40px;
 }
 
 .left-content p {
   font-size: var(--font-size-medium);
   margin-bottom: 5px;
-  color: black;
 }
 
-/* Nút "Đặt phòng ngay" */
 button.pick {
   background-color: var(--color-buttonPick);
   color: white;
@@ -106,20 +66,22 @@ button.pick {
   font-size: 1.1em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(133, 123, 222, 0.1); /* Đổ bóng */
   margin-top: 20px;
 }
 
-/* Khi rê chuột vào nút */
 button.pick:hover {
   background-color: var(--color-buttonPickHover);
   transform: scale(1.05);
 }
 
-/* Khi nhấn nút */
 button.pick:active {
   background-color: var(--color-buttonPickActive);
   transform: scale(0.98);
+}
+
+.order-link {
+  text-decoration: none;
+  color: white;
 }
 
 .right-content {
@@ -128,7 +90,6 @@ button.pick:active {
   justify-content: center;
   align-items: center;
   margin-right: 70px;
-  font-size: var(--font-size-large);
 }
 
 .music-img {
@@ -138,7 +99,6 @@ button.pick:active {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Container 2 */
 .main-container {
   display: flex;
   justify-content: space-between;
@@ -148,22 +108,21 @@ button.pick:active {
   padding: 0 30px;
 }
 
+@font-face {
+  font-family: font2;
+  src: url('../week4/font-styleHome/Pacifico/Pacifico-Regular.ttf');
+}
+
 .main-title {
   font-size: var(--font-size-h3);
+  font-family: font2;
   color: var(--color-buttonPick);
   margin-bottom: 20px;
   margin-left: 50px;
-  font-family: font2;
 }
 
-@font-face {
-  font-family: font2;
-  src: url("../week4/font-styleHome/Pacifico/Pacifico-Regular.ttf");
-}
-
-/* Container nhỏ cho các liên kết */
 .small-container {
-  flex: 1; /* Đặt cho các container nhỏ chiếm không gian đồng đều */
+  flex: 1;
   background-color: var(--color-containersmall);
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -174,20 +133,16 @@ button.pick:active {
   margin: 0 10px;
 }
 
-/* Hiệu ứng hover cho container nhỏ */
 .small-container:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Hình ảnh bên trong container nhỏ */
 .small-img {
   width: 100%;
   border-radius: 8px;
-  max-width: 100%;
 }
 
-/* Liên kết bên trong container nhỏ */
 .small-container a {
   display: block;
   text-decoration: none;
@@ -198,65 +153,123 @@ button.pick:active {
   padding: 10px;
 }
 
-/* Khi hover vào thẻ a */
 .small-container a:hover {
   background-color: var(--color-buttonPickHover);
   transform: scale(1.05);
   color: cyan;
 }
 
-/* Khi thẻ a được click */
 .small-container a:active {
   background-color: var(--color-buttonPickActive);
   transform: scale(0.98);
 }
 
-/* Footer */
-footer {
-  background-color: var(--color-footer);
-  padding: 15px 15px;
-  color: var(--color-white);
-}
-
-/* Footer */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 @font-face {
   font-family: font3;
-  src: url("../week4/font-styleHome/Moo_Lah_Lah/MooLahLah-Regular.ttf");
-}
-
-.footer-logo {
-  font-size: var(--font-size-large);
-  font-family: font3;
-  font-size: var(--font-size-h2);
-  margin-left: 30px;
-}
-
-.footer-contact {
-  display: flex;
-  font-family: font2;
-  font-size: var(--font-size-h3);
-  align-items: center;
-}
-
-.phone-icon {
-  font-size: var(--font-size-h2);
-  margin-right: 10px;
+  src: url('../week4/font-styleHome/Moo_Lah_Lah/MooLahLah-Regular.ttf');
 }
 
 @font-face {
   font-family: font4;
-  src: url("../week4/font-styleHome/Kablammo/Kablammo-Regular-VariableFont_MORF.ttf");
+  src: url('../week4/font-styleHome/Kablammo/Kablammo-Regular-VariableFont_MORF.ttf');
+}
+
+footer {
+  background-color: var(--color-footer);
+  padding: 15px;
+  color: var(--color-white);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: var(--font-size-h2);
+  font-family: font3;
+  flex: 1 1 auto; 
+  margin-bottom: 10px; 
+}
+
+.footer-contact {
+  font-family: font2;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-large);
+  flex: 1 1 auto; 
+  margin-bottom: 10px; 
+}
+
+.phone-icon {
+  margin-right: 10px;
+  font-size: var(--font-size-large);
 }
 
 .footer-message {
   font-family: font4;
-  font-size: var(--font-size-large);
-  text-align: right;
-  margin-right: 60px;
+  font-size: var(--font-size-medium);
+  flex: 1 1 auto; 
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center; 
+    padding: 0; 
+  }
+
+  .left-content {
+    align-items: center; 
+    margin-left: 0; 
+  }
+
+  .left-content h2 {
+    font-size: 20px; 
+  }
+
+  .left-content p {
+    font-size: 12px; 
+  }
+
+  .music-img {
+    max-width: 200px; 
+  }
+
+  .main-container {
+    flex-direction: column; 
+    align-items: center; 
+    padding: 0; 
+  }
+
+  .small-container {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+
+  .small-img {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  footer {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .footer-container {
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+
+  .footer-message {
+    text-align: center; 
+    margin-right: 0; 
+  }
 }
