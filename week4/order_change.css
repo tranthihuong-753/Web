@@ -1,0 +1,81 @@
+@media only screen and (max-width: 750px) {
+    header{
+      height: 50px;
+    }
+    #returnhome {
+      height: 40px;
+    }
+  }
+  .datphongtructuyen button{
+    height: 30px;
+  }
+  .datphongtructuyen button:honer{
+    border-color:#dea1f5;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .datphongtructuyen {
+      height: 40px;
+    }
+    .datphongtructuyen p{
+      font-size: 20px;
+    }
+  }
+
+  /* Thay đổi kích thước font cho màn hình nhỏ hơn (Tablet, điện thoại) */
+@media only screen and (max-width: 750px) {
+    .khungbamuc nav{
+        font-size: 10px; /* Điều chỉnh cho Tablet */
+        color:#1f5f83;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .bontinhnangchinh {
+      background-color:#98c0c7;
+      margin: 20px;
+      padding: 20px;
+    }
+    .bonthongtindatphong{
+        color: #104852;
+        font-size: 15px; /* Điều chỉnh cho Tablet */
+    }
+    .button {
+      width: 100px;
+      font-size: 10px;
+      background-color: #c4e2e7;
+      color:#044570;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .ttll{
+      background-color: #97c6e6;
+    }
+    .ttll p{
+      font-size: 15px;
+      color: #1f5f8a;
+    }
+    #thongtinlienlac p{
+      font-size: 13px;
+      color: #044570;
+    } 
+    #thongtinlienlac input {
+      width: 400px;
+      height: auto;
+      background-color: #2775a8;
+    }
+  }
+  
+@media (max-width: 750px) {
+    header p {
+      font-size: 30px;
+    }
+    .button {
+      width: 350px;
+      font-size: 3vw;
+    }
+    .bontinhnangchinh {
+      grid-template-columns: 1fr;
+    }
+  }
