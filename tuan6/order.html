@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./order.css" />
+    <link rel="stylesheet" href="./order_change.css" />
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI Library -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <header>
+      <p>ORDER</p>
+      <div>
+        <a href="./home.html"
+          ><img id="returnhome" src="./images/image0.png" title="ảnh home"
+        /></a>
+      </div>
+    </header>
+    <div class="datphongtructuyen">
+      <p><b>Đặt phòng trực tuyến</b></p>
+      <button>Tra cứu đặt phòng</button>
+    </div>
+    <div class="khungbamuc">
+      <nav>1</nav>
+      <nav>2</nav>
+      <nav>3</nav>
+      <nav>THÔNG TIN ĐẶT PHÒNG</nav>
+      <nav>THÔNG TIN LIÊN LẠC</nav>
+      <nav>HOÀN TẤT</nav>
+    </div>
+    <div class="bontinhnangchinh">
+      <div>
+        <p><b class="bonthongtindatphong">Chọn phòng</b></p>
+        <button class="button" onclick="toggleMenu('listphong', 'selectedPhong')" id="selectedPhong">
+          Chọn phòng ▼
+        </button>
+        <div id="listphong" class="bontinhnangchinh-menu">
+          <div class="menu-item" onclick="selectItem('S 1-2 người', 'selectedPhong', 'listphong')">S 1-2 người</div>
+          <div class="menu-item" onclick="selectItem('M 3-4 người', 'selectedPhong', 'listphong')">M 3-4 người</div>
+          <div class="menu-item" onclick="selectItem('L 6-8 người', 'selectedPhong', 'listphong')">L 6-8 người</div>
+        </div>
+      </div>
+      <div>
+        <p><b class="bonthongtindatphong">Chọn ngày</b></p>
+        <input type="text" id="datetimepicker" class="button" placeholder="Chọn ngày" readonly />
+      </div>
+    </div>
+    <div class="ttll">
+      <p><b>Thông tin liên lạc</b></p>
+      <div id="thongtinlienlac">
+        <p>Tên</p>
+        <input />
+        <p>Số điện thoại</p>
+        <input />
+      </div>
+    </div>
+    <div class="thanhtoan">
+      <div>
+        <p>Số tiền cần thanh toán</p>
+        <p>0 VND</p>
+      </div>
+      <div>
+        <button id="datphong" onclick="window.location.href ='page3.html'">
+          Đặt phòng
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function toggleMenu(menuId, buttonId) {
+    var menu = document.getElementById(menuId);
+    if (menu.style.display === "none" || menu.style.display === "") {
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
+  }
+
+  function selectItem(value, buttonId, menuId) {
+    document.getElementById(buttonId).innerText = value;
+    document.getElementById(menuId).style.display = "none";
+  }
+
+  $(document).ready(function () {
+    $("#datetimepicker").datepicker({
+      dateFormat: "yy-mm-dd",
+      minDate: 0,
+    });
+  });
+</script>
